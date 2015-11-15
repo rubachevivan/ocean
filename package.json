@@ -1,0 +1,21 @@
+{
+  "name": "ocean",
+  "version": "1.0.0",
+  "description": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ivan Rubachev",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "express": "latest",
+    "express-session": "^1.12.1",
+    "express3-handlebars": "^0.5.2",
+    "mongo-oplog": "^1.0.1",
+    "mongoose": "latest",
+    "passport": "^0.3.0"
+  }
+}
