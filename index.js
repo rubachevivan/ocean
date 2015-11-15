@@ -69,15 +69,15 @@ server.listen(port, function() {
 });
 
 //mongodb listener
-var OplogWatcher = require('mongo-oplog-watcher');
-var oplog = new OplogWatcher({
-    host:"127.0.0.1" ,ns: "test.metrics"
-});
+//var OplogWatcher = require('mongo-oplog-watcher');
+// var oplog = new OplogWatcher({
+//     host:"127.0.0.1" ,ns: "test.metrics"
+// });
 
-oplog.on('insert', function(doc) {
-    // console.info(doc);
-    processData(doc);
-});
+// oplog.on('insert', function(doc) {
+//     // console.info(doc);
+//     processData(doc);
+// });
 
 //sockets
 
