@@ -1,0 +1,115 @@
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/mystyles.css">
+    <link rel="stylesheet" href="/public/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/epoch.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Ocean</title>
+</head>
+<body>
+<nav class="nav navbar-default navbar-fixed-top" style="display: {{ login }}">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Открыть навигацию</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">Океан</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="{{ index }}"><a href="/">Главная</a></li>
+                <li class="{{ info }}"><a href="/info">Информация</a></li>
+                <li class="{{ archive }}"><a href="/archive">Архив</a></li>
+                <!--<li><a href="#">Личный кабинет</a></li>-->
+            </ul>
+            {{#unless isAuth}}
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <a href="#" class="btn btn-primary">Вход</a>
+                        </div>
+                    </form>
+            {{/unless}}
+            {{#if isAuth}}
+                <div class="navbar-right">
+                    <p style="vertical-align: middle">Hello, {{ user.name }}</p>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</nav>
+
+{{{ body }}}
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/public/particles/particles.js"></script>
+<script src="/public/particles/app.js"></script>
+<script type="text/javascript" src="/public/bootstrap.min.js"></script>
+<script src="/public/socket.io.js"></script>
+<script src="/public/d3.min.js"></script>
+<script src="/public/epoch.min.js"></script>
+<script src="/public/chart.js"></script>
+<script>
+    // var socket = io();
+
+    // var temp, tm;
+    // var temparr = [];
+    // var tempobj = {};
+
+    
+
+    // socket.on("newData", function(metrics) {
+    //     temp = metrics.y; // get temperature from json file send via websocket
+    //     tm = metrics.time; // same for time
+    // });
+
+
+    /*var smoothie = new SmoothieChart();
+    smoothie.streamTo(document.getElementById("mycanvas"));
+
+    var line1 = new TimeSeries();
+    
+    setInterval(function() {
+        line1.append(new Date().getTime(), temp);
+    }, 1000);
+
+    smoothie.addTimeSeries(line1);
+    */
+    
+    // var pushChartData = function(temp, tm) {
+    //    nextDataPoint = [ {time: tm, y: temp } ];
+    //    myChart.push(nextDataPoint);
+    // };
+
+    // var data = [
+    //     {
+    //         label: "Series 1",
+    //         values: [ {time: 000000, y: 0} ]
+    //     }
+    // ];
+    // var myChart = $('#chart').epoch({
+    //     type: 'time.area',
+    //     data: data,
+    //     axes: ['left', 'right', 'bottom'],
+    //     ticks: { time: 5, right: 5, left: 5 }
+    // });
+
+    // setInterval(function() {
+    //     pushChartData(temp, tm);
+    // }, 1000);
+    
+    
+</script>
+</body>
