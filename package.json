@@ -12,5 +12,12 @@
     "express": "latest",
     "express3-handlebars": "latest",
     "socket.io": "latest"
+  },
+  "engines": {
+    "node": "4.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rubachevivan/ocean.git"
   }
 }
